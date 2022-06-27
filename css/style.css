@@ -1,44 +1,4 @@
-body,
-html {
-  padding: 0;
-  margin: 0;
-  color: #333333;
-  font-size: 0.8rem;
-  width: 100%;
-  height: 100%;
-  font-family: "SF Pro Display", Roboto, Noto, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-  color: #333333;
-}
-
-ul,
-li,
-dl,
-dd {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: #333333;
-}
-
-i {
-  font-style: normal;
-}
+/* 遮罩 */
 .mask{
     background: rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -46,6 +6,8 @@ i {
     top: 0;
     height: 100vh;
     width: 100vw;
+    opacity: 0;
+    z-index: 666;
 }
 .popup{
     background: #fff;
@@ -53,20 +15,78 @@ i {
     position: fixed;
     left: 0;
     width: 100%;
-    bottom: 0;
+    bottom: -500px;
     box-sizing: border-box;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    z-index: 888;
+
 }
-.list{
-    margin: 1rem 0;
+/* 标题 */
+.popup .popup-title{
+  text-align: center;
+  font-weight: 550;
+  margin-bottom: .5rem;
 }
-.list li{
+/* 列表 */
+.popup .list{
+  max-height:16rem;
+  overflow-y:auto;
+  overflow-x:hidden ;
+}
+.popup .item{
+  font-size: .7rem;
+  padding: .8rem 0;
+  border-bottom: 1px solid #d2d2d2;
+}
+.popup .active{
+  color: #3091E9;
+}
+.popup .item:last-child{
+  border-bottom: none;
+}
+/* 提交按钮 */
+.popup .submit{
+  appearance: none;
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+  color: #fff;
+  background: #3091E9;
+  font-size: .7rem;
+  border: none;
+  outline: none;
+}
+.popup .popup-footer{
+  margin-top: .5rem;
+}
+.popup .search-box{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d2d2d2;
+}
+.popup .search-box input{
+    border: none;
+    outline: none;
+    appearance: none;
+    padding: .5rem 0;
+    margin-left: .4rem;
+    flex: 1;
+  
+}
+.popup .search-icon::after{
+  content: '';
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: url('../img/search.png') no-repeat center/cover;
+}
+/* 分页 */
+.popup .page{
     margin-bottom: 1rem;
-}
-.page{
-    margin: 1rem 0;
     display: flex;
 }
-.page div{
+.popup .page div{
     flex: 1;
     text-align: center;
 }

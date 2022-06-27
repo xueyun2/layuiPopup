@@ -1,0 +1,169 @@
+
+img{
+    object-fit: cover;
+}
+
+.nav-fixed{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index: 1111;
+}
+
+.nav{
+    height: 1.8rem;
+    line-height: 1.8rem;
+}
+.nav-span{
+    display: inline;
+    width: 80%
+}
+.nav2{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2.5rem;
+    z-index: 1;
+}
+
+/* 点击下的导航 */
+.nav-box{
+    position: relative;
+}
+.nav-list{
+    display: none;
+    position: absolute;
+    top: 1.6rem;
+    right: .36rem;
+    background-color:#4B4B4B;
+    width: 6rem;
+    border-radius: 0.2rem;
+    z-index: 1111;
+}
+.nav-list-li img{
+    width: 1rem;
+    height: 1rem;
+}
+
+.nav-list-li {
+    border-top: 1px solid #5E5D5D;
+}
+.nav-list-li:first-of-type{
+    border-top:none;
+}
+.nav-list-sanj{
+    position: relative;
+}
+.nav-nav-list-sanj1{
+    position: absolute;
+    top: -0.4rem;
+    right: 0.16rem;
+    display: block;
+    width: .65rem;
+    height: .6rem;
+    background: url(/static/img/sanjiao.png) no-repeat left/cover;
+}
+
+/* 搜索 */
+.search{
+    width:80%;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    border-radius: .2rem 0 0 .2rem;
+}
+.search-but{
+    border: none;
+    background: #F6F6F6;
+}
+
+.search-a{
+    display: block;
+    background: #F0F1F2;
+    border-radius:0 .2rem .2rem 0;
+    top: 10px;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    text-align: center;
+    width:20%;
+}
+
+/********************************** 
+  标题 */
+.title{
+    border-left: .2rem solid #0B4289;
+}
+
+/********************************** 
+更多 */
+.more {
+    border-bottom: 1px solid #D9D9D9;
+}
+
+/********************************** 
+五角星评分 */
+
+.pingfen {
+    display: inline-block;
+    position: relative;
+    width: 3.5rem;
+    height: .7rem;
+    margin-right: .3rem;
+    background: url(/static/img/pingfen.png) no-repeat left/cover;
+}
+.pingfen i {
+    display: inline-block;
+    width: 100%;
+    height: .7rem;
+    background: url(/static/img/pingfen1.png) no-repeat left/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+}
+
+/********************************** 
+分页 */
+.page-ul li{
+    width: 33%;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    text-align: center;
+}
+.page-ul-li{
+    border-left: 1px solid #D9D9D9;
+    border-right: 1px solid #D9D9D9;
+}
+
+/********************************** 
+边框 */
+.frame-solid {
+    border:1px solid #D9D9D9;
+}
+.frame-top{
+    border-top:1px solid #D9D9D9;
+}
+.frame-bom{
+    border-bottom:1px solid #D9D9D9;
+}
+.frame-left{
+    border-left:1px solid #D9D9D9;
+}
+.frame-right{
+    border-right:1px solid #D9D9D9;
+}
+
+/* 强制不换行 */
+.space{
+    white-space: nowrap; 
+}
+
+/* 导航选中样式 */
+.search-nav-list-a{
+    color: #333;
+}
+.search-nav-list-li-cur{
+    color: #0B4289;
+    font-weight: bold;
+}
